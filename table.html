@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="img\pokaball.png">
+  <title>Matrix QA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fqonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+<body style="height: 1089px" 
+ background="img\background.jpg"
+    background-size:cover;
+>
+<!-- NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="">Matrix - QA</a>
+	</nav>
+<!-- Welcome -->
+	<div class="container apa">
+		<div class="text-center">
+			<hr>
+		 	<h6>SMALL PLACE FOR BIG THINGS</h6>
+			<h1>Welcome to Matrix QA site</h1>
+			<p style="color: #cbb9ff"> 
+				internal site 
+			</p>
+		</div>
+		<hr>
+
+
+<div class="container">
+  <h1>HTML5 Editable Table</h1>
+  <p>Through the powers of <strong>contenteditable</strong> and some simple jQuery you can easily create a custom editable table. No need for a robust JavaScript library anymore these days.</p>
+  
+  <ul>
+    <li>An editable table that exports a hash array. Dynamically compiles rows from headers</li> 
+    <li>Simple / powerful features such as add row, remove row, move row up/down.</li>
+  </ul>
+  
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td contenteditable="true">Stir Fry</td>
+        <td contenteditable="true">stir-fry</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+      <!-- This is our clonable table line -->
+      <tr class="hide">
+        <td contenteditable="true">Untitled</td>
+        <td contenteditable="true">undefined</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <button id="export-btn" class="btn btn-primary">Export Data</button>
+  <p id="export"></p>
+</div>
+
+
+
+<script>
+
+var $TABLE = $('#table');
+var $BTN = $('#export-btn');
+var $EXPORT = $('#export');
+
+$('.table-add').click(function () {
+  var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
+  $TABLE.find('table').append($clone);
+});
+
+$('.table-remove').click(function () {
+  $(this).parents('tr').detach();
+});
+
+$('.table-up').click(function () {
+  var $row = $(this).parents('tr');
+  if ($row.index() === 1) return; // Don't go above the header
+  $row.prev().before($row.get(0));
+});
+
+$('.table-down').click(function () {
+  var $row = $(this).parents('tr');
+  $row.next().after($row.get(0));
+});
+
+// A few jQuery helpers for exporting only
+jQuery.fn.pop = [].pop;
+jQuery.fn.shift = [].shift;
+
+$BTN.click(function () {
+  var $rows = $TABLE.find('tr:not(:hidden)');
+  var headers = [];
+  var data = [];
+  
+  // Get the headers (add special header logic here)
+  $($rows.shift()).find('th:not(:empty)').each(function () {
+    headers.push($(this).text().toLowerCase());
+  });
+  
+  // Turn all existing rows into a loopable array
+  $rows.each(function () {
+    var $td = $(this).find('td');
+    var h = {};
+    
+    // Use the headers from earlier to name our hash keys
+    headers.forEach(function (header, i) {
+      h[header] = $td.eq(i).text();   
+    });
+    
+    data.push(h);
+  });
+  
+  // Output the result
+  $EXPORT.text(JSON.stringify(data));
+});
+
+
+
+
+
+
+
+	function copyStringToClipboard (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Products\\CARTO 3 V7\\Bugs";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function BugFolderV7 (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Products\\CARTO 3 V7\\Bugs";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function VersionV7 (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "\\\\prod.isilon.bwiil.eu.jnj.com\\groups4\\DL\\Carto3\\V7";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function PerformanceFolder (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Carto_Db\\PerformanceLogs\\2018";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function VersionV6 (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "\\\\prod.isilon.bwiil.eu.jnj.com\\groups4\\DL\\Carto3\\V6";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function BugFolderV6 (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Products\\CARTO 3 V6\\bugs";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function MatrixFolder (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Testing\\matrix";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function CalendarFolder (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "L:\\Testing\\Team Leader SQA";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+	function CartoReleasedVersions (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = "\\\\eu.jnj.com\\bwiildfsroot\\SW_Versions\\CARTO3 - ReleasedVersions";
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	   //alert the user
+	   alert("Copied the text: " + el.value);
+		}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

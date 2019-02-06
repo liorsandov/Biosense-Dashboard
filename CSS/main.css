@@ -1,0 +1,125 @@
+body  {
+  background-size:cover;
+
+}
+
+
+
+.apa a{
+  color: white;
+  font-family: 'Rubik';
+  font-size:16px
+}
+
+.liorss a:hover {
+    color: #4e91e8;
+}
+
+.atexts a{
+	color: black;
+}
+
+a.ex2:hover, a.ex2:active 
+{font-size: 150%;}
+
+
+.grid-container {
+  display: grid;
+  height: auto;
+  width: auto; 
+  grid-template-columns: auto;
+}
+
+
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+
+.grid-item {
+  
+  
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.text-center{
+	text-align: center;
+}
+
+
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.1;
+  text-decoration: none;
+}
+
+
+table {
+    border: 1px solid #c792ee00;
+    background-color: #c792ee00;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 3%;
+  border-radius: 25px 90px;
+  background: #deb6fc73;
+
+}
+
+
+/*deb6fc73*/
+
+
+thead {
+  background-color: #8d57b500;
+  text-align: center;
+    color: red;
+
+
+}
+
+
+tbody tr td{
+    color: red;
+
+}
+
+th {
+  background-color: #8d57b500;
+  text-align: center;
+      color: red;
+
+
+}
+td {
+    text-align: center;
+    color: red;
+
+}
+th {
+    color: red;
+
+}
+tr{
+    color: red;
+}
+
+.navbar{
+  margin-bottom: 0px !important;
+}
+
+hr{
+
+border-top: 1px solid #56487624 !important;
+
+}
+

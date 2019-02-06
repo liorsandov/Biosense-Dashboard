@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="img\pokaball.png">
+  <title>Matrix SQA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<!--css -->
+	<link rel="stylesheet" href="css/bootstrapcss/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrapcss/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrapcss/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/main.css">
+
+<!--Font--> 
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<script type="text/javascript" src="js/main.js"></script>
+<!--JS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!--Not workking
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+<!-- NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="index.html">Matrix - SQA</a>
+	</nav>
+</head>
+
+<body style="height: 1089px" 
+ background="img\background.jpg"
+    background-size:cover;
+>
+
+
+
+<!-- Welcome -->
+	<div class="container apa">
+		<div class="text-center">
+			<hr>
+			<h1>Welcome to Matrix SQA site</h1>
+			<p style="color: #cbb9ff"> 
+				internal site 
+			</p>
+		</div>
+		<hr>
+		<div class="grid-container-3">
+	<!---      Start here    all the columnse       -->
+		<!-- Matrix -->
+
+				<div>
+					<div class="grid-item">
+						<h3>Matrix</h3>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://deshe.matrix.co.il/deshe/Pages/HoursReportManagement.aspx">
+								דשא 
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://matrix.net.hilan.co.il/login">
+								חילנט 
+							</a>
+
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://www.mysodexo.co.il/">
+								Cibus 
+							</a>
+				  		</button>
+					</div>
+					<div>
+						<div class="grid-item">
+					  		<button type="button" class="btn btn-outline-primary">
+					  			<a href="Service Jig.html">
+									Service Jig 
+								</a>
+				  			</button>
+						</div>
+					</div>
+<!-- 					<div class="isDisabled">
+						<div class="grid-item">
+					  		<button type="button" class="btn btn-outline-primary">
+					  			<a>
+									Birthday 
+								</a>
+				  			</button>
+						</div>
+					</div>
+					<div class="isDisabled">
+						<div class="grid-item">
+					  		<button type="button" class="btn btn-outline-primary">
+					  			<a>
+									Teach & Rich 
+								</a>
+					  		</button>
+					  	</div>
+					</div>
+				  	<div class="isDisabled">
+					  	<div class="grid-item">
+					  		<button type="button" class="btn btn-outline-primary">
+					  			<a>
+									Happy Hour 
+								</a>
+					  		</button>
+						</div>
+					</div> -->
+				</div>
+		<!-- Biosense -->
+				<div>
+				 	<div class="grid-item">
+				 		<h3>Biosense</h3>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://jnj.sharepoint.com/teams/htcintranethome/SitePages/Home.aspx">
+								HTC SharePoint 
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://www.compliancewire.com/Secure/Custom/HCCPSSOLoginSupport.aspx">
+								Compliancewire
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="https://hd-mz.malam.com/malamhelpdesk/login.aspx">
+								IT Ticket
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiusdiweb0p1.na.jnj.com/partnolookup/Default.aspx">
+								Catheter Catalog
+							</a>		
+				  		</button>
+					</div>
+				</div>
+		<!-- Project Folder -->
+				<div>
+					<div class="grid-item">
+			 			<h3>Project Folder</h3>
+					</div>
+					<div class="grid-item">
+						<div>
+							<button id="VersionFolder" 
+									title='' 
+									class="btn btn-outline-primary" 
+									data-placement="top">
+										<a> Version Folder </a>
+							</button>
+						</div>
+					</div>
+
+					<div class="grid-item">
+						<div>
+							<button id="BugFolder" 
+									title='' 
+									class="btn btn-outline-primary" 
+									data-placement="top">
+										<a> Bug Folder </a>
+							</button>
+						</div>
+					</div>
+					<div class="grid-item">
+				  		<button onclick="CartoReleasedVersions()" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#CartoReleasedVersions">
+				  			<a>
+								Carto Released Versions
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button onclick="PerformanceFolder()" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#PerformanceFolder">
+				  			<a>
+								Performance 
+							</a>
+				  		</button>
+					</div>
+					
+					<div class="grid-item">
+				  		<button onclick="CalendarFolder()" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#CalendarFolder">
+				  			<a>
+								Calendar 2018
+							</a>
+				  		</button>
+					</div>
+				</div>
+		<!-- Usful links -->
+				<div>
+					<div class="grid-item">
+				  		<h3>Useful Links</h3>
+					</div>
+				  	<div class="grid-item">
+				  		<button onclick="MatrixFolder()" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#MatrixFolder">
+				  			<a>
+								Matrix Folder 
+							</a>
+				  		</button>
+					</div>
+
+					<!--href="http://bwiiltiagileap1.eu.jnj.com:8001/Agile/default/login-cms.jsp"-->
+
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalAgile">
+				  			<a>
+								Agile 
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://guestpass.jnj.com/">
+								Guest PS 
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#TopLevel">
+				  			<a>
+								Top Level Validation
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button onclick="RestoreStudy()" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#RestoreStudy">
+				  			<a>
+								Restore Study
+							</a>
+				  		</button>
+					</div>	
+				</div>
+		<!-- Project dashboard -->
+				<div>
+					<div class="grid-item">
+				  		<h3>Project Dashboard</h3>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiiltitfs17:8080/tfs/BiosenseCollection/Carto3/_dashboards?activeDashboardId=7f780e83-4c42-4b31-8216-bc904c0553f6">
+								V7
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiiltitfs17:8080/tfs/BiosenseCollection/Carto3/_dashboards?activeDashboardId=2896c5e6-5426-42ab-b95e-f98e19dd8a7c">
+								V6
+							</a>
+				  		</button>
+					</div>
+				  	<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiiltitfs17:8080/tfs/BiosenseCollection/CartoENT/CartoENT%20Team/_dashboards">
+								TruDi
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiiltitfs17:8080/tfs/BiosenseCollection/RFGen/RFGen%20Team/_dashboards?activeDashboardId=60049849-bf79-435d-ab47-f429c97bf8d5">
+								nGen
+							</a>
+				  		</button>
+					</div>
+					<div class="grid-item">
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a>
+								Helios
+							</a>
+				  		</button>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+
+<!-- text under  -->
+
+	<div class="container apa">
+		<div class="text-center">
+			<hr>
+			<p style="color: #cbb9ff"> 
+				The new "Popover" is here  ☺
+			</br> in Version & Bug Folder
+			</p>
+		</div>
+	</div>
+
+
+
+<!-- Start Popover -->
+	<!-- Version Folder -->
+		<div class='container hide' id='VersionFolderPopover'>
+		     <button onclick="VersionV6()" type="button" class="btn btn-light" data-toggle="modal" data-target="#VersionV6">
+				<a>
+				V6 
+				</a>
+		  	</button>	    
+		     <button onclick="VersionV7()" type="button" class="btn btn-light" data-toggle="modal" data-target="#VersionV7">
+				<a>
+				V7 
+				</a>
+		  	</button>
+		</div>
+
+	<!-- Bug Folder -->
+		<div class='container hide' id='BugFolderPopover'>
+		     <button onclick="BugFolderV6()" type="button" class="btn btn-light" data-toggle="modal" data-target="#BugFolderV6">
+				<a>
+				V6 
+				</a>
+		  	</button>	    
+		     <button onclick="BugFolderV7()" type="button" class="btn btn-light" data-toggle="modal" data-target="#BugFolderV7">
+				<a>
+				V7 
+				</a>
+		  	</button>
+		</div>
+
+
+
+
+
+
+
+<!-- modal  -->
+
+
+
+	<!-- Button trigger modal 
+	<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+	  Launch demo modal
+	</button>
+	-->
+
+
+	<!-- Bug folder V6 -->
+		<div class="modal fade bd-example-modal-sm" id="BugFolderV6" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Products\CARTO 3 V6\Bugs</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Bug folder V7 -->
+		<div class="modal fade bd-example-modal-sm" id="BugFolderV7" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Products\CARTO 3 V7\Bugs</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Version V6 -->
+		<div class="modal fade bd-example-modal-sm" id="VersionV6" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">\\prod.isilon.bwiil.eu.jnj.com\groups4\DL\Carto3\V6</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Version V7 -->
+		<div class="modal fade bd-example-modal-sm" id="VersionV7" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">\\prod.isilon.bwiil.eu.jnj.com\groups4\DL\Carto3\V7</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Carto Released Versions -->
+		<div class="modal fade bd-example-modal-sm" id="CartoReleasedVersions" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">\\eu.jnj.com\bwiildfsroot\SW_Versions\CARTO3 - ReleasedVersions</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Performance -->
+		<div class="modal fade bd-example-modal-sm" id="PerformanceFolder" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Carto_Db\PerformanceLogs\2018</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Calendar 2018 -->
+		<div class="modal fade bd-example-modal-sm" id="CalendarFolder" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Testing\Team Leader SQA</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Matrix Folder -->
+		<div class="modal fade bd-example-modal-sm" id="MatrixFolder" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Testing\matrix</p>			
+				</div>
+			</div>
+		</div>
+
+	<!-- Restore Study -->
+		<div class="modal fade bd-example-modal-sm" id="RestoreStudy" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">The following text was copied to your clipboard</h5>
+					</div>
+						</br><p class="text-center">L:\Testing\AT\Restore Test Backups\RestoreTestData</p>			
+				</div>
+			</div>
+		</div>
+
+
+	<!-- Top Level Validation -->
+		<div class="modal fade bd-example-modal-sm" id="TopLevel" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">Press on text to open</h5>
+					</div>
+						</br>
+						<button type="button" class="btn btn-outline-primary">
+				  			<a href="doc\Top Level validation v7.pdf">
+								Top Level Validation V7
+							</a>
+				  		</button>
+				  		<button type="button" class="btn btn-outline-primary">
+				  			<a href="doc\Top Level validation v6.pdf">
+								Top Level Validation V6
+							</a>
+				  		</button>
+				</div>
+			</div>
+		</div>
+
+	<!-- Agile   https://-->
+		<div class="modal fade bd-example-modal-sm" id="ModalAgile" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h5 class="modal-title" class="text-center" id="exampleModalLongTitle">Press on text to open</h5>
+					</div>
+						<button type="button" class="btn btn-outline-primary">
+				  			<a href="http://bwiiltiagileap1.eu.jnj.com:8001/Agile/default/login-cms.jsp">
+								Agile Website
+							</a>
+				  		</button>
+				  	</br>
+			</div>
+		</div>
+	
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+
+
+
+
+
+
+</html>
